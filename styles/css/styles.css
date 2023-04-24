@@ -1,0 +1,384 @@
+/* imports */
+@import url("https://use.typekit.net/weg0jpl.css");
+/* custom font */
+@font-face {
+  font-family: "bluessmile";
+  src: url("../../blues_smile-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+/* varaibles & fonts */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.6rem;
+}
+
+h1 {
+  font-family: "bluessmile", sans-serif;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+h3 {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* css grids */
+/* this grid is for the header + summary + preamble + sidebar */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 0.1fr);
+  grid-template-areas: "header" "summary" "preamble";
+}
+
+/* this grid for the main class which includes explanation + participation + benefits + requirements + footer */
+.main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 0.5fr);
+  grid-template-areas: "explanation" "participation" "benefits" "requirements" "footer";
+}
+
+/* styling */
+/* first section: header + summary class + preamble class */
+header {
+  grid-area: header;
+  background-image: url(../../images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 35.7rem;
+  color: white;
+  padding: 2rem 0 0 2rem;
+}
+header h2 {
+  font-family: "bluessmile", sans-serif;
+  font-size: 1.5rem;
+}
+
+.summary {
+  grid-area: summary;
+  padding: 2rem 2rem 0 2rem;
+}
+.summary a {
+  color: #ABB534;
+}
+.summary a:hover {
+  color: #00341E;
+}
+
+.preamble {
+  grid-area: preamble;
+  padding: 2rem;
+}
+
+/* second section: main class including explanation, participation, benefits, requirements, and footer */
+.explanation {
+  grid-area: explanation;
+  background-color: #ABB534;
+  color: #010101;
+  padding: 4rem 3rem;
+}
+.explanation h3 {
+  font-family: "bluessmile", sans-serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.participation {
+  grid-area: participation;
+  padding: 2rem;
+}
+.participation a {
+  color: #ABB534;
+}
+.participation a:hover {
+  color: #00341E;
+}
+
+.benefits {
+  grid-area: benefits;
+  padding: 0 2rem 2rem 2rem;
+}
+.benefits::after {
+  background-image: url(../../images/benefits-ghosts.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  display: block;
+  height: 20rem;
+  position: relative;
+  margin: 20px 0 0 -11px;
+}
+
+.requirements {
+  grid-area: requirements;
+  background-image: url(../../images/requirements.jpg);
+  background-position: left;
+  background-size: cover;
+  padding: 2rem;
+  color: white;
+}
+.requirements h3 {
+  font-family: "bluessmile", sans-serif;
+  font-size: 2rem;
+}
+.requirements p {
+  max-width: 40rem;
+}
+.requirements a {
+  color: #ABB534;
+}
+.requirements a:hover {
+  color: white;
+}
+
+footer {
+  grid-area: footer;
+  text-align: center;
+  padding: 2rem 1rem 2rem 0;
+}
+footer a {
+  font-family: "bluessmile", sans-serif;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  color: #010101;
+}
+footer a:hover {
+  color: #ABB534;
+}
+
+/* final section: sidebar */
+.sidebar {
+  grid-area: sidebar;
+  background-image: url(../../images/solid-green-background.jpg);
+  background-size: cover;
+  color: white;
+}
+.sidebar h3 {
+  font-family: "bluessmile", sans-serif;
+  font-size: 1.5rem;
+}
+.sidebar li {
+  font-family: brandon-grotesque, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1rem;
+  color: white;
+}
+.sidebar li a {
+  color: white;
+}
+.sidebar li a:hover {
+  color: #ABB534;
+}
+
+.wrapper {
+  padding: 3rem 2rem 4rem 7rem;
+}
+
+.design-selection {
+  padding-bottom: 4rem;
+}
+.design-selection h3::before {
+  background-image: url(../../images/ghost\ bullet.svg);
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  left: -2rem;
+  margin: -2rem;
+}
+
+.design-archives {
+  padding-bottom: 4rem;
+}
+.design-archives h3::before {
+  background-image: url(../../images/ghost\ bullet.svg);
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  left: -2rem;
+  margin: -2rem;
+}
+
+.zen-resources h3::before {
+  background-image: url(../../images/ghost\ bullet.svg);
+  background-repeat: no-repeat;
+  content: "";
+  display: block;
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  left: -2rem;
+  margin: -2rem;
+}
+
+/* media queries */
+@media (min-width: 576px) {
+  .explanation {
+    padding: 4rem 4rem 3rem 4rem;
+  }
+  .requirements {
+    padding: 2rem 5rem 4rem 5rem;
+  }
+}
+@media (min-width: 768px) {
+  .intro {
+    display: grid;
+    grid-template-columns: 2.3fr 3fr;
+    grid-template-rows: repeat(3, 0.1fr);
+    grid-template-areas: "header header" ". summary" ". preamble";
+  }
+  .summary {
+    padding: 2rem 5rem;
+  }
+  .preamble {
+    padding: 0 5rem;
+  }
+  .main {
+    display: grid;
+    margin-top: 10.1rem;
+    grid-template-columns: 3fr 3fr;
+    grid-template-rows: 0.1fr 1.1fr;
+    grid-template-areas: "explanation explanation" "participation benefits" "participation extra4" "requirements requirements" "footer footer";
+  }
+  .explanation {
+    padding: 4rem 6rem;
+  }
+  .benefits {
+    padding-top: 2rem;
+  }
+  .requirements {
+    padding-left: 5rem;
+  }
+  .requirements p {
+    max-width: 38rem;
+  }
+  .sidebar {
+    position: absolute;
+    top: 35.7rem;
+  }
+  .wrapper {
+    padding-left: 6rem;
+    padding-right: 3rem;
+  }
+}
+@media (min-width: 800px) {
+  .main {
+    margin-top: 13.3rem;
+  }
+}
+@media (min-width: 900px) {
+  .main {
+    margin-top: 14.9rem;
+  }
+}
+@media (min-width: 974px) {
+  .main {
+    margin-top: 16.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .main {
+    margin-top: 16.5rem;
+  }
+  .explanation {
+    padding: 4rem 12rem;
+  }
+  .requirements p {
+    max-width: 38rem;
+  }
+  .wrapper {
+    padding-left: 8rem;
+    padding-right: 5rem;
+  }
+}
+@media (min-width: 1058px) {
+  .main {
+    margin-top: 19.7rem;
+  }
+}
+@media (min-width: 1100px) {
+  .main {
+    margin-top: 19.7rem;
+  }
+}
+@media (min-width: 1200px) {
+  .summary {
+    padding-right: 9rem;
+  }
+  .preamble {
+    padding-right: 9rem;
+  }
+  .main {
+    margin-top: 19.7rem;
+  }
+  .explanation {
+    padding: 5rem 20rem;
+  }
+  .requirements p {
+    max-width: 50%;
+  }
+  .wrapper {
+    padding-left: 11rem;
+    padding-right: 7rem;
+  }
+}
+@media (min-width: 1428px) {
+  .main {
+    margin-top: 21.3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .summary {
+    max-width: 50rem;
+  }
+  .preamble {
+    max-width: 50rem;
+  }
+  .main {
+    margin-top: 19.7rem;
+  }
+  .explanation p {
+    max-width: 53rem;
+    padding-left: 12rem;
+  }
+  .participation {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+  .benefits {
+    padding: 2rem 5rem 2rem 7rem;
+  }
+  .wrapper {
+    padding-left: 14rem;
+    padding-right: 11rem;
+  }
+}/*# sourceMappingURL=styles.css.map */

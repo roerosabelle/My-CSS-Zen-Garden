@@ -1,0 +1,449 @@
+/* imports */
+@import url("https://use.typekit.net/weg0jpl.css");
+
+/* custom font */
+@font-face {
+    font-family: "bluessmile";
+    src: url("../../blues_smile-webfont.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* varaibles & fonts */
+$primary-color: #010101;
+$secondary-color: #40651F;
+$background-color1: #ABB534;
+$background-color2: #00341E;
+$rem-1: 1rem;
+$rem-1half: 1.5rem;
+$rem-2: 2rem;
+$rem-3: 3rem;
+$rem-4: 4rem;
+$rem-5: 5rem;
+$rem-6: 6rem;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+p {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: $rem-1;
+    line-height: 1.6rem;
+}
+
+h1 {
+    font-family: 'bluessmile', sans-serif;
+    font-size: $rem-3;
+}
+
+h2 {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 900;
+    font-style: normal; 
+    font-size: $rem-1half;
+    padding-bottom: $rem-1;
+}
+
+h3 {
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 900;
+    font-style: normal; 
+    font-size: $rem-1half;
+    padding-bottom: $rem-1;
+}
+
+/* css grids */
+/* this grid is for the header + summary + preamble + sidebar */
+ .intro {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 0.1fr);
+        grid-template-areas: 
+        "header"
+        "summary"
+        "preamble"
+    }
+
+/* this grid for the main class which includes explanation + participation + benefits + requirements + footer */
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 0.5fr);
+    grid-template-areas: 
+    "explanation"
+    "participation" 
+    "benefits"
+    "requirements"
+    "footer"
+}
+
+/* styling */
+/* first section: header + summary class + preamble class */
+header {
+    grid-area: header;
+    background-image: url(../../images/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 35.7rem;
+    color: white;
+    padding: $rem-2 0 0 $rem-2;
+    h2 {
+        font-family: 'bluessmile', sans-serif;
+        font-size: $rem-1half;
+    }
+}
+
+.summary {
+    grid-area: summary;
+    padding: $rem-2 $rem-2 0 $rem-2;
+    a {
+        color: $background-color1;
+        &:hover {
+            color: $background-color2;
+        }
+    }
+}
+
+.preamble {
+    grid-area: preamble;
+    padding: $rem-2;
+}
+
+/* second section: main class including explanation, participation, benefits, requirements, and footer */
+.explanation {
+    grid-area: explanation;
+    background-color: $background-color1;
+    color: $primary-color;
+    padding: $rem-4 $rem-3;
+    h3 {
+        font-family: 'bluessmile', sans-serif;
+        font-size: $rem-1half;
+        text-align: center;
+    }
+} 
+
+.participation {
+    grid-area: participation;
+    padding: $rem-2;
+    a {
+        color: $background-color1;
+        &:hover {
+            color: $background-color2;
+        }
+    }
+}
+
+.benefits {
+    grid-area: benefits;
+    padding: 0 $rem-2 $rem-2 $rem-2;
+    &::after {
+        background-image: url(../../images/benefits-ghosts.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        content: '';
+        display: block;
+        height: 20rem;
+        position: relative;
+        margin: 20px 0 0 -11px;
+    }
+}
+
+.requirements {
+    grid-area: requirements;
+    background-image: url(../../images/requirements.jpg);
+    background-position: left;
+    background-size: cover;
+    padding: $rem-2;
+    color: white;
+    h3 {
+        font-family: 'bluessmile', sans-serif;
+        font-size: $rem-2;
+    }
+    p {
+        max-width: 40rem;
+    }
+    a {
+        color: $background-color1;
+        &:hover {
+            color: white;
+        }
+    }
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    padding: $rem-2 $rem-1 $rem-2 0;
+    a {
+        font-family: 'bluessmile', sans-serif;
+        font-size: $rem-1half;
+        padding-left: $rem-1;
+        color: $primary-color;
+        &:hover {
+            color: $background-color1;
+        }
+    }
+}
+
+/* final section: sidebar */
+.sidebar {
+    grid-area: sidebar;
+    background-image: url(../../images/solid-green-background.jpg);
+    background-size: cover;
+    color: white;
+    h3 {
+        font-family: 'bluessmile', sans-serif;
+        font-size: $rem-1half;
+    }
+    li {
+        font-family: brandon-grotesque, sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        font-size: $rem-1;
+        color: white;
+        a {
+            color: white;
+            &:hover {
+                color: $background-color1;
+            }
+        }
+    }
+}
+
+.wrapper {
+    padding: $rem-3 $rem-2 $rem-4 7rem;
+}
+
+.design-selection {
+    padding-bottom: $rem-4;
+    h3::before {
+        background-image: url(../../images/ghost\ bullet.svg);
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: $rem-3;
+        width: $rem-3;
+        position: relative;
+        left: -2rem;
+        margin: -2rem;
+    }
+}
+
+.design-archives {
+    padding-bottom: $rem-4;
+    h3::before {
+        background-image: url(../../images/ghost\ bullet.svg);
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: $rem-3;
+        width: $rem-3;
+        position: relative;
+        left: -2rem;
+        margin: -2rem;
+    }
+}
+
+.zen-resources {
+    h3::before {
+        background-image: url(../../images/ghost\ bullet.svg);
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: $rem-3;
+        width: $rem-3;
+        position: relative;
+        left: -2rem;
+        margin: -2rem;
+    }
+}
+
+/* media queries */
+@media (min-width: 576px) /* for mobile */{
+    .explanation {
+        padding: $rem-4 $rem-4 $rem-3 $rem-4;
+    }
+
+    .requirements {
+        padding: $rem-2 $rem-5 $rem-4 $rem-5;
+    }
+}
+
+@media (min-width:768px) /* for tablets */{
+      .intro {
+        display: grid;
+        grid-template-columns: 2.3fr 3fr;
+        grid-template-rows: repeat(3, 0.1fr);
+        grid-template-areas: 
+        "header header"
+        ". summary"
+        ". preamble"
+    }
+
+    .summary {
+        padding: $rem-2 $rem-5;
+    }
+
+    .preamble {
+        padding: 0 $rem-5;
+    }
+
+     .main {
+        display: grid;
+        margin-top: 10.1rem;
+        grid-template-columns: 3fr 3fr;
+        grid-template-rows: 0.1fr 1.1fr;
+        grid-template-areas: 
+        "explanation explanation"
+        "participation benefits"
+        "participation extra4"
+        "requirements requirements"
+        "footer footer"
+    }
+
+    .explanation {
+        padding: $rem-4 $rem-6;
+    }
+
+    .benefits {
+        padding-top: $rem-2;
+    }
+
+    .requirements {
+        padding-left: $rem-5;
+        p {
+            max-width: 38rem;
+        }
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 35.7rem;
+    }
+
+    .wrapper {
+        padding-left: 6rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 800px) {
+    .main {
+        margin-top: 13.3rem;
+    }
+}
+
+@media (min-width: 900px) {
+    .main {
+        margin-top: 14.9rem;
+    }
+}
+
+@media (min-width: 974px) {
+    .main {
+        margin-top: 16.5rem;
+    }
+}
+
+@media (min-width: 992px) /* for laptops */{
+    .main {
+        margin-top: 16.5rem;
+    }
+
+    .explanation {
+        padding: $rem-4 12rem;
+    }
+
+    .requirements p {
+        max-width: 38rem;
+    }
+
+    .wrapper {
+        padding-left: 8rem;
+        padding-right: 5rem;
+    }
+
+}
+
+@media (min-width: 1058px) {
+    .main {
+        margin-top: 19.7rem;
+    }
+}
+
+@media (min-width: 1100px) {
+    .main {
+        margin-top: 19.7rem;
+    }
+}
+
+@media (min-width: 1200px) /* for large devices */{
+    .summary {
+        padding-right: 9rem;
+    }
+    .preamble {
+        padding-right: 9rem;
+    }
+
+    .main {
+        margin-top: 19.7rem;
+    }
+
+    .explanation {
+        padding: $rem-5 20rem;
+    }
+
+    .requirements p {
+        max-width: 50%;
+    }
+
+    .wrapper {
+        padding-left: 11rem;
+        padding-right: 7rem;
+    }
+}
+
+@media (min-width: 1428px) {
+    .main {
+        margin-top: 21.3rem;
+    }
+}
+
+@media (min-width: 1440px) /* for large devices */{
+    .summary {
+        max-width: 50rem;
+    }
+
+    .preamble {
+        max-width: 50rem;
+    }
+
+    .main {
+        margin-top: 19.7rem;
+    }
+
+    .explanation p {
+        max-width: 53rem;
+        padding-left: 12rem;
+    }
+
+    .participation {
+        padding-left: $rem-5;
+        padding-right: $rem-5;
+    }
+
+    .benefits {
+        padding: $rem-2 $rem-5 $rem-2 7rem;
+    }
+
+    .wrapper {
+        padding-left: 14rem;
+        padding-right: 11rem;
+    }
+}
+
